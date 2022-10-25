@@ -1,0 +1,20 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 10
+
+
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command LC_ALL=C i3status
+}
+
+set $conf_dir "~/.config/i3"
+include ~`$conf_dir`/startup_cmd.conf
+include ~`$conf_dir`/bindings/.conf
